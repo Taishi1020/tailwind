@@ -1,6 +1,32 @@
 @import "tailwindcss";
 
+/* テーマのcolorsを設定する */
+@theme {
+  /* ルート変数（グローバル設定） */
+  --color-primary: #000000;
+  --color-secondary: #ffffff;
+  
+  
+    /* プライマリカラー */
+    --color-primary-100: oklch(95% 0.05 250);
+    --color-primary-500: oklch(65% 0.2 250);
+    --color-primary-900: oklch(40% 0.25 250);
+
+    /* セカンダリカラー */
+    --color-secondary-100: oklch(95% 0.05 150);
+    --color-secondary-500: oklch(65% 0.2 150);
+    --color-secondary-900: oklch(40% 0.25 150);
+}
+
+/* カスタムクラスの定義 */
+.btn-primary-500 {
+  @apply bg-[color:var(--color-primary-500)] hover:bg-[color:var(--color-primary-900)] text-white font-bold py-2 px-4 rounded mx-10;
+}
+
+.btn-secondary-500 {
+  @apply bg-[color:var(--color-secondary-500)] hover:bg-[color:var(--color-secondary-900)] text-white font-bold py-2 px-4 rounded mx-10;
+}
 
 .btn {
-    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-10;
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-10;
 }

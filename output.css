@@ -21,6 +21,10 @@
     --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-primary-500: oklch(65% 0.2 250);
+    --color-primary-900: oklch(40% 0.25 250);
+    --color-secondary-500: oklch(65% 0.2 150);
+    --color-secondary-900: oklch(40% 0.25 150);
   }
 }
 @layer base {
@@ -169,33 +173,21 @@
   }
 }
 @layer utilities {
-  .mx-10 {
-    margin-inline: calc(var(--spacing) * 10);
-  }
   .my-10 {
     margin-block: calc(var(--spacing) * 10);
-  }
-  .rounded {
-    border-radius: 0.25rem;
   }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-\[color\:var\(--color-primary-500\)\] {
+    border-color: var(--color-primary-500);
+  }
   .border-blue-400 {
     border-color: var(--color-blue-400);
   }
-  .bg-blue-500 {
-    background-color: var(--color-blue-500);
-  }
   .p-16 {
     padding: calc(var(--spacing) * 16);
-  }
-  .px-4 {
-    padding-inline: calc(var(--spacing) * 4);
-  }
-  .py-2 {
-    padding-block: calc(var(--spacing) * 2);
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -205,15 +197,11 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .text-white {
-    color: var(--color-white);
+  .text-\[color\:var\(--color-primary-500\)\] {
+    color: var(--color-primary-500);
   }
-  .hover\:bg-blue-700 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-blue-700);
-      }
-    }
+  .text-\[color\:var\(--color-primary-900\)\] {
+    color: var(--color-primary-900);
   }
   .sm\:text-red-400 {
     @media (width >= 40rem) {
@@ -234,6 +222,36 @@
   .lg\:text-pink-500 {
     @media (width >= 64rem) {
       color: var(--color-pink-500);
+    }
+  }
+}
+.btn-primary-500 {
+  margin-inline: calc(var(--spacing) * 10);
+  border-radius: 0.25rem;
+  background-color: var(--color-primary-500);
+  padding-inline: calc(var(--spacing) * 4);
+  padding-block: calc(var(--spacing) * 2);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-primary-900);
+    }
+  }
+}
+.btn-secondary-500 {
+  margin-inline: calc(var(--spacing) * 10);
+  border-radius: 0.25rem;
+  background-color: var(--color-secondary-500);
+  padding-inline: calc(var(--spacing) * 4);
+  padding-block: calc(var(--spacing) * 2);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-secondary-900);
     }
   }
 }

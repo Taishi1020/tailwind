@@ -12,12 +12,22 @@
             Tailwind CSS入門
         </h1>
     </div>
-    <div class="border border-blue-400 p-16 my-10">
-        <h1 class="lg:text-7xl font-bold text-3xl sm:text-red-400 md:text-blue-400 lg:text-pink-500">
-            Tailwind CSS入門
+    <div class="border border-[color:var(--color-primary-500)] p-16 my-10">
+        <h1 class="lg:text-7xl font-bold text-3xl text-[color:var(--color-primary-900)]">
+            カスタムカラーを使用
         </h1>
+        <p class="text-[color:var(--color-primary-500)]">
+            これはprimary-500色のテキストです
+        </p>
     </div>
-    <button class="btn">ボタン</button>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-10">ボタン</button>
+    
+    <!-- 標準ボタン -->
+    <button class="btn">標準ボタン</button>
+    
+    <!-- プライマリーボタン -->
+    <button class="btn-primary-500">プライマリーボタン</button>
+    
+    <!-- セカンダリーボタン -->
+    <button class="btn-secondary-500">セカンダリーボタン</button>
 </body>
 </html>
